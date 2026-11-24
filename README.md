@@ -1,5 +1,5 @@
 <figure data-latex-placement="h">
-<img src="logo.svg" style="width:50.0%" />
+<img src="docs/readme/logo.svg" style="width:50.0%" />
 <figcaption>Cinnabar logo</figcaption>
 </figure>
 
