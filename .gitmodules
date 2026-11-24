@@ -1,0 +1,3 @@
+[submodule "submodules/kilnware"]
+	path = submodules/kilnware
+	url = https://www.github.com/kilnware-dev/kilnware

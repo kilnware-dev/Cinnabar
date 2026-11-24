@@ -1,5 +1,5 @@
 
-namespace lf {
+namespace cb {
 	template<typename T>
 	class basic_string {
 		constexpr usize SSO_SIZE = 24;
