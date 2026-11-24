@@ -1,8 +1,9 @@
 # Cinnabar Language
 ## Overview
-<img align="left" style="width:260px" src="https://github.com/kilnware-dev/kilnware/blob/main/assets/logo.svg" width="288px">
-
+<img align="left" src="https://github.com/kilnware-dev/kilnware/blob/main/assets/logo.svg?raw=true" alt="Cinnabar Language Logo" width="240" hspace="20" vspace="6">
 Cinnabar is a high level, statically typed and compiled language that aims to improve the syntax and feeling of a systems language. It will in the future include facilities such as standard library rendering, UI functions and serialization.
+
+
 
 ## 🌟 Highlights (planned)
 - explicit relocate operator $
