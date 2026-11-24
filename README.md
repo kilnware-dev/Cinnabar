@@ -1,66 +1,30 @@
-## 1. Introduction
+# Cinnabar Language
+## Overview
+<img align="left" style="width:260px" src="https://github.com/kilnware-dev/kilnware/blob/main/assets/logo.svg" width="288px">
 
-Hello! So happy to have you here. This is my first specification and language and my first attempt at designing a language at this scale. I would be extremely happy if you gave me any feedback on literally anything. These are also my first LaTeX documents.
+Cinnabar is a high level, statically typed and compiled language that aims to improve the syntax and feeling of a systems language. It will in the future include facilities such as standard library rendering, UI functions and serialization.
 
-  
+## 🌟 Highlights (planned)
+- explicit relocate operator $
+- everything implicit is always opt-in, rather than opt-out
+- everything is \[\[nodiscard\]\]
+- suppress operators with `abandon $foo`
+- "simple code oriented" rather than object or data oriented
 
-> **The goal:?**
-> Create a language that will make native applications great again.
+## Contents
 
-## 2. How AI is Used in This Project
+| Path         | Description                                    |
+| ------------ | ---------------------------------------------- |
+| /src         | the compiler front- and middle-end             |
+| /docs/readme | the old readme (its so pretty :3)              |
+| /docs/spec   | the entire LaTeX Specification, run `main.tex` |
 
-**It isn’t.** I have used AI in the past, but most everything in this document is hand written. It might be used on occasion when I’m learning a new LaTeX syntax or feature.
+## Planned but not designed bits of the language
+I read about this in another language proposal, which is the [kov](https://github.com/wube/kov}{kov) language. In these documents Kovarex proposes having a persistent compiler. I fell in love with this idea and have been thinking about it a ton. But until now, I can't figure out how to write such a compiler.
 
+## How AI is used in this project
+It isn't. I have used AI in the past, but most everything in this document is hand written. It might be used on occasion when I'm learning a new LaTeX syntax or feature. (god i hate i cant make this readme in latex because evil github wont render it :<, if youd like to read it open the old readme)
 
-AI is a great tool when you need to get something done. But this? This I care about. I want to do it right.
+This project is about the journey, not the destination
 
-  
-
-## 3. About Cinnabar
-
-Cinnabar is a **statically typed, compiled, general-purpose programming language** with a focus on **applications and games**. It supports low-level operations such as direct pointer manipulation and raw memory allocation.
-
-  
-
-### Fixing C++’s Decades of Baggage
-
-|**Area**|**C++ Default**|**Cinnabar Design**|
-|---|---|---|
-|**Initialization**|Multiple competing syntaxes & the _most vexing parse_|**A single way** to initialize a variable — no most vexing parse|
-|**Return Values**|Ignored silently unless marked `[[nodiscard]]`|**`nodiscard` by default**|
-|**Conversions**|Implicit unless marked `explicit`|**Explicit by default** — requires an `implicit` keyword|
-|**Copies & References**|Implicit copying and referencing|**No implicit copying or referencing** unless explicitly defined|
-|**Destructor Control**|Relies on compiler optimizations (NRVO, etc.)|Direct language control via **`abandon $foo;`**|
-
-### Direct Destructor Suppression (`abandon`)
-
-Cinnabar gives you access to language facilities that are genuinely missing from C++, such as `abandon $foo;`.
-
-  
-
-This syntax allows for the suppression of the destructor, turning behaviors that C++ only achieves through compiler optimizations into direct, predictable language features.
-
-  
-
-### Compiler Architecture
-
-My compiler follows a **front-end / middle-end / back-end** architecture (`Front-End` -> `Middle-End` -> `Back-End`). By default, the back-end is **LLVM**, although this may be customizable in the future.
-
-  
-
-## 4. Planned (Not Yet Designed) Features
-
-> [!NOTE]
-> 
-> **Persistent Compiler** — I read about this in another language proposal, the [kov language](https://github.com/wube/kov). In these documents, Kovarex proposes having a persistent compiler. I fell in love with this idea and have been thinking about it a ton—though until now, I haven't yet figured out how to write such a compiler.
-> 
->   
-
-## 5. Contents of This Repository
-
-This repository contains the specification and source files for the **front-end** and **middle-end** of Cinnabar.
-
-|**Path**|**Description**|
-|---|---|
-|`/docs/spec/`|The full language specification written as a collection of LaTeX documents|
-|`/docs/readme/`|Source files and assets (including `logo.svg`) for this `README.md`|
+To make an example of what I would use AI for. My company logo. Now don't be upset, I came up with the full idea of the logo. I used AI to generate me an SVG of the logo idea. I gave it the gradient, the braces, the rounded corners. Entirely my own idea, just transformed into SVG with AI as I have no interest in learning SVG.
