@@ -1,7 +1,8 @@
 # Cinnabar Language
 
-<img align="left" src="https://github.com/kilnware-dev/kilnware/blob/main/assets/logo.svg?raw=true" alt="Cinnabar Language Logo" width="240" hspace="20" vspace="6">Hello! So happy to have you here. This is my first specification and language and my first attempt at designing a language at this scale. I would be extremely happy if you gave me any feedback on literally anything. These are also my first \LaTeX{} documents.
+<img align="left" src="https://github.com/kilnware-dev/kilnware/blob/main/assets/logo.svg?raw=true" alt="Cinnabar Language Logo" width="240" hspace="20" vspace="6">Hello! So happy to have you here. This is my first specification and language and my first attempt at designing a language at this scale. I would be extremely happy if you gave me any feedback on literally anything. The spec is also my first LaTeX document.
 <br clear="both" />
+## Overview
 Cinnabar is a statically typed language compiled, general purpose programming language with a focus on applications and games. It supports low level operation such as direct pointer manipulation and raw memory allocation.
 
 The goal with Cinnabar is to fix C++'s decades of baggage. There should be a single way to initialize a variable. There should not be a most vexing parse. I aim to improve the bad defaults by making functions nodiscard by default, and requiring an implicit keyword, instead of explicit.
@@ -14,7 +15,7 @@ This syntax allows for the suppression of the destructor, which allows for some 
 My compiler follows a front-end/middle-end/back-end architecture. By default the back-end is LLVM, although this may be customizable in the future.
 
 
-## 🌟 Highlights (planned)
+## Highlights
 - explicit relocate operator $
 - everything implicit is always opt-in, rather than opt-out
 - everything is \[\[nodiscard\]\]
