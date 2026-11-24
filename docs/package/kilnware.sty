@@ -1,5 +1,14 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{cinnabar}[2026/11/24 Cinnabar document style]
+\ProvidesPackage{kilnware}[2026/11/24 Kilnware document style]
+
+
+\usepackage[
+    a4paper,
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+]{geometry}
 
 \RequirePackage{eqparbox}
 
@@ -41,27 +50,33 @@
 % Internal Helpers & Commands
 % ==============================================================================
 
+\newcommand{\crucible}{\href{https://github.com/kilnware-dev/Crucible}{Crucible}}
+\newcommand{\rutile}{\href{https://github.com/kilnware-dev/Rutile}{Rutile}}
+\newcommand{\cinnabar}{\href{https://github.com/kilnware-dev/Cinnabar}{Cinnabar}}
+\newcommand{\kilnware}{\hrev{https://github.com/kilnware-dev/}}
+
+
 \newcounter{paralabelgroup}
 \newlength{\subparadashwidth}
 \AtBeginDocument{\settowidth{\subparadashwidth}{---}}
 
-\NewDocumentCommand{\para}{ o }{
-  \par\medskip\noindent
-  \refstepcounter{stdpara}
-  \makebox[0pt][r]{\raisebox{0.35ex}{\scriptsize\thestdpara}\hspace{\marginnumsep}}
-  \IfValueTF{#1}{
-    \eqmakebox[plg-\theparalabelgroup][l]{#1\hspace{\paralabelpresep}\hfill\paralabelpunct}
-    \hspace{\paralabelpostsep}
+\NewDocumentCommand{\para}{ o }{%
+  \par\vspace{0.25em}\noindent
+  \refstepcounter{stdpara}%
+  \makebox[0pt][r]{\raisebox{0.35ex}{\scriptsize\thestdpara}\hspace{\marginnumsep}}%
+  \IfValueTF{#1}{%
+    \eqmakebox[plg-\theparalabelgroup][l]{#1\hspace{\paralabelpresep}\hfill\paralabelpunct}%
+    \hspace{\paralabelpostsep}%
     \hangindent=\dimexpr\eqboxwidth{plg-\theparalabelgroup} + \paralabelpostsep\relax
     \hangafter=1
   }{%
-    \stepcounter{paralabelgroup}
+    \stepcounter{paralabelgroup}%
   }%
   \ignorespaces
 }
 
 \NewDocumentCommand{\subpara}{ o }{
-  \par\smallskip\noindent
+  \par\vspace{0.1em}\noindent
   \refstepcounter{stdsubpara}
   \makebox[0pt][r]{\footnotesize(\thestdsubpara)\hspace{\marginnumsep}}
   \hspace*{\subparadashindent}---\hspace{\subparadashsep}

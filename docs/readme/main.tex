@@ -1,15 +1,23 @@
 \documentclass{article}
 
-\usepackage{../package/cinnabar}
+\usepackage{../package/kilnware}
+\usepackage{svg}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{parskip}\setlength{\parindent}{0pt}
+
 
 \begin{document}
-
+\begin{figure}[h]
+    \centering
+    \includesvg[width=0.5\textwidth]{logo.svg}
+    \caption{Cinnabar logo}
+\end{figure}
 \noindent
 {\Huge\bfseries Cinnabar Language}
 
-\vspace{0.4em}
-
-\vspace{1.5em}
+\vspace{2em}
 
 \noindent
 \textit{lefloysi}
@@ -20,5 +28,4 @@
 
 
 \input{foreword}
-
 \end{document}
