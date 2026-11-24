@@ -7,25 +7,39 @@
 \usepackage{xcolor}
 \usepackage{parskip}\setlength{\parindent}{0pt}
 
-
 \begin{document}
-\begin{figure}[h]
-    \centering
-    \includesvg[width=0.5\textwidth]{logo.svg}
-    \caption{Cinnabar logo}
-\end{figure}
-\noindent
-{\Huge\bfseries Cinnabar Language}
-
-\vspace{2em}
 
 \noindent
-\textit{lefloysi}
+\begin{minipage}[t]{0.56\textwidth}
+    \vspace{0pt}
+    {\Huge\bfseries Cinnabar Language}
+    \vspace{0.8em}
+    \textit{lefloysi}
+    \vspace{1em}
+    \rule{\linewidth}{0.4pt}
+    \vspace{0.5em}
 
-\vspace{2em}
+    % Moves "1 Introduction" & the first paragraph UP beside the bottom of the logo,
+    % automatically narrowing them to 0.56\textwidth!
+    \section*{1\quad Introduction} % or \section{Introduction} depending on kilnware
+    Hello! So happy to have you here. This is my first specification and language and my first attempt at designing a language at this scale. I would be extremely happy if you gave me any feedback on literally anything. These are also my first \LaTeX{} documents.
+\vspace{1em}
 
-\hrule
+The goal is to create a language that will make native applications great again.
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+    \vspace{1.5em} % Pushes logo down so it spans across the rule AND the intro text
+    \raggedleft
+    \includesvg[
+        width=\linewidth,
+        inkscapepath=../../.build/
+    ]{logo.svg}
+\end{minipage}
 
+\vspace{1em}
 
+% Rest of your sections (2 How AI is used..., 3 About Cinnabar...) flow full-width below!
 \input{foreword}
+
 \end{document}
