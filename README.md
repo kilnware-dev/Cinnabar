@@ -1,8 +1,17 @@
 # Cinnabar Language
-## Overview
-<img align="left" src="https://github.com/kilnware-dev/kilnware/blob/main/assets/logo.svg?raw=true" alt="Cinnabar Language Logo" width="240" hspace="20" vspace="6">
-Cinnabar is a high level, statically typed and compiled language that aims to improve the syntax and feeling of a systems language. It will in the future include facilities such as standard library rendering, UI functions and serialization.
 
+<img align="left" src="https://github.com/kilnware-dev/kilnware/blob/main/assets/logo.svg?raw=true" alt="Cinnabar Language Logo" width="240" hspace="20" vspace="6">Hello! So happy to have you here. This is my first specification and language and my first attempt at designing a language at this scale. I would be extremely happy if you gave me any feedback on literally anything. These are also my first \LaTeX{} documents.
+<br clear="both" />
+Cinnabar is a statically typed language compiled, general purpose programming language with a focus on applications and games. It supports low level operation such as direct pointer manipulation and raw memory allocation.
+
+The goal with Cinnabar is to fix C++'s decades of baggage. There should be a single way to initialize a variable. There should not be a most vexing parse. I aim to improve the bad defaults by making functions nodiscard by default, and requiring an implicit keyword, instead of explicit.
+
+There is also no implicit copying, implicit referencing unless you define it. Cinnabar also gives you access to some language facilities that are genuinely missing from C++. Such as `abandon $foo`
+
+This syntax allows for the suppression of the destructor, which allows for some things C++ only gets through optimization to be direct language features.
+
+
+My compiler follows a front-end/middle-end/back-end architecture. By default the back-end is LLVM, although this may be customizable in the future.
 
 
 ## 🌟 Highlights (planned)
