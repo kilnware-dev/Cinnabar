@@ -1,28 +1,44 @@
 \chapter{Terms and Definitions}
-\begin{list}{}{%
-    \setlength{\leftmargin}{0pt}%
-    \setlength{\parsep}{0pt}%
-    \setlength{\itemsep}{-0.5em}%
-    \setlength{\topsep}{0pt}%
-}
-    \item \subsection{expression}
-    \para A construct of operators and values that produce a value.
-    \subpara \(5 + 3\) evaluates to \(8\)
-    \subsection{statement}
-    \subpara \texttt{foo()} Evaluates to its return type. 
-    \item
-    \subsection{callable}
-    \para Anything with an overloaded call operator.
-    \subpara \texttt{fn foo() -> i32;}
-    \subsection{call operator}
-    \para Just a simple paranthese
-    \subpara \texttt{()}
 
-    \subsection{brackets}
-    \para When speaking of brackets, they are always spoken of in pairs. The only exception is angle brackets.
-    \subpara[Angle Brackets] \texttt{< >}
-    \subpara[Brackets] \texttt{[ ]}
-    \subpara[Curcly Brackets or Braces] \texttt{\{ \}}
-    \subpara[Round Brackets or Paranthese] \texttt{( )}
-\end{list}
+\section{Words}
+The things defined here will never be referred to any other way, but the way they are defined.
 
+
+\begin{termlist}
+    \item \subsection{evaluate} \para Determine the value of an expression.
+    
+    \item \subsection{expression} \para A construct that, when evaluated, produces a value and/or side effects.
+    
+    \item \subsection{place} \para A physical or abstract location a valid value exists in.
+
+    \item \subsection{result type} \para The type that an expression evaluates to.
+    
+    \item \subsection{result value} \para The value that an expression evaluates to.
+    
+    \item \subsection{statement} \para A syntatic construct that specifies an action or controls the execution flow of a program.
+
+    \item \subsection{value} \para A temporary result of an expression. Temporaries are destroyed as soon as they are not needed anymore.
+    
+\end{termlist}
+
+\section{Punctuator}
+\begin{termlist}
+
+\item \subsection{Arrows} \para The term \textit{arrow} refers to the following few symbols.
+\subpara[Left Dash Arrow] \texttt{->}
+\subpara[Right Dash Arrow] \texttt{<-}
+
+\item \subsection{Braces} \para The term \textit{braces} refers to the following two symbols:
+    \subpara[Left brace] \texttt{\{}
+    \subpara[Right brace] \texttt{\}}
+
+\item \subsection{Brackets} \para The term \textit{brackets} refers to the following two symbols:
+    \subpara[Left bracket] \texttt{[}
+    \subpara[Right bracket] \texttt{]}
+
+\item \subsection{Chevrons} \para The term \textit{chevrons} refers to the following two symbols:
+    \subpara[Left chevron] \texttt{<}
+    \subpara[Right chevron] \texttt{>}
+    \para Expect to see these two without their counterpart in eg. \texttt{<=} 
+
+\end{termlist}
