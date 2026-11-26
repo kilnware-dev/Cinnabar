@@ -39,3 +39,4 @@ It isn't. I have used AI in the past, but most everything in this document is ha
 This project is about the journey, not the destination
 
 To make an example of what I would use AI for. My company logo. Now don't be upset, I came up with the full idea of the logo. I used AI to generate me an SVG of the logo idea. I gave it the gradient, the braces, the rounded corners. Entirely my own idea, just transformed into SVG with AI as I have no interest in learning SVG.
+

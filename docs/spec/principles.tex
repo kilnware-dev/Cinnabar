@@ -1,5 +1,13 @@
 \chapter{Principles}
 
 
-
 \section{Relocation}
+\para Any mutable identity can be relocated using the prefix operator \texttt{\$}.
+\para Relocation is destructive.
+\para Because there is no default implicit copy in this language and moves are destructive, this means that a move constructor actually takes a value argument.
+\begin{verbatim}
+i32 x = 5;
+i32 y = $x;
+// print(x)
+// ill formed: x has been moved from
+\end{verbatim}

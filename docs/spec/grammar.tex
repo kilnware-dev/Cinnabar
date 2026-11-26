@@ -1,12 +1,15 @@
 \chapter{Grammar}
 
 
-letter = "a" | "A" | "b" | "B" | "c" | "C" | "d" | "D" | "e" | "E" | "f" | "F" | "g" | "G" | "h" | "H" | "i" | "I" | "j" | "J" | "k" | "K" | "l" | "L" | "m" | "M" | "n" | "N" | "o" | "O" | "p" | "P" | "q" | "Q" | "r" | "R" | "s" | "S" | "t" | "T" | "u" | "U" | "v" | "V" | "w" | "W" | "x" | "X" | "y" | "Y" | "z" | "Z";
 
-whitespace = " " | "\backslash n" | "\backslash t" | "\backslash n\backslash r";
+\ebnfdef{digit}{\ebnfstr{0} | \ebnfstr{1} | \ebnfstr{2} | \ebnfstr{3} | \ebnfstr{4} | \ebnfstr{5} | \ebnfstr{6} | \ebnfstr{7} | \ebnfstr{8} | \ebnfstr{9}}
 
-digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+\ebnfdef{alpha-char}{\ebnfstr{a} | \ebnfstr{A} | \ebnfstr{b} | \ebnfstr{B} | \ebnfstr{c} | \ebnfstr{C} | \ebnfstr{d} | \ebnfstr{D} | \ebnfstr{e} | \ebnfstr{E} | \ebnfstr{f} | \ebnfstr{F} | \ebnfstr{g} | \ebnfstr{G} | \ebnfstr{h} | \ebnfstr{H} | \ebnfstr{i} | \ebnfstr{I} | \ebnfstr{j} | \ebnfstr{J} | \ebnfstr{k} | \ebnfstr{K} | \ebnfstr{l} | \ebnfstr{L} | \ebnfstr{m} | \ebnfstr{M} | \ebnfstr{n} | \ebnfstr{N} | \ebnfstr{o} | \ebnfstr{O} | \ebnfstr{p} | \ebnfstr{P} | \ebnfstr{q} | \ebnfstr{Q} | \ebnfstr{r} | \ebnfstr{R} | \ebnfstr{s} | \ebnfstr{S} | \ebnfstr{t} | \ebnfstr{T} | \ebnfstr{u} | \ebnfstr{U} | \ebnfstr{v} | \ebnfstr{V} | \ebnfstr{w} | \ebnfstr{W} | \ebnfstr{x} | \ebnfstr{X} | \ebnfstr{y} | \ebnfstr{Y} | \ebnfstr{z} | \ebnfstr{Z}}
 
-identifier = ("_" | letter), { underscore | letter | digit}
+\ebnfdef{underscore}{\ebnfstr{\_}}
 
-infix-op = "+", "-", "*", "/", "<",
+\ebnfdef{identifier}{(\ebnfterm{underscore} | \ebnfterm{alpha-char}), \{\ebnfterm{underscore} | \ebnfterm{charakter} | \ebnfterm{digit}\}}
+
+\ebnfdef{single-quote}{\ebnfstr{'}}
+\ebnfdef{double-quote}{\ebnfstrsingle{"}}
+
